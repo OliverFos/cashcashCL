@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cashcash.cashcash2.TabTwoController">
+    <Label layoutX="14.0" layoutY="162.0" />
+    <TextField fx:id="clientIDTextField" layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="98.0" promptText="Enter Client ID" />
+
+    <HBox spacing="10" />
+    <Button fx:id="searchClientButton" layoutX="122.0" layoutY="14.0" onAction="#handleSearchClientButtonClick" text="Search Client" />
+    <Text fx:id="messageErreur" fill="#c70000" layoutX="234.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+    <Text fx:id="messageSucc" fill="#00b728" layoutX="234.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+
+    <Label layoutX="194.0" layoutY="53.0" text="Type contrat:" />
+    <ChoiceBox fx:id="typeContrat" layoutX="194.0" layoutY="71.0" prefHeight="26.0" prefWidth="150.0">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="tc001" />
+                <String fx:value="tc002" />
+                <String fx:value="tc003" />
+            </FXCollections>
+        </items>
+    </ChoiceBox>
+    <Button fx:id="creerContrat" layoutX="194.0" layoutY="245.0" onAction="#handleCreateContract" text="Create Contract" />
+    <TableView fx:id="serialNumbersTableView" layoutX="14.0" layoutY="71.0" prefHeight="200.0" prefWidth="150.0">
+        <columns>
+            <TableColumn fx:id="numMaterielColumn" prefWidth="150.0" text="Serial Numbers" />
+        </columns>
+    </TableView>
+    <DatePicker fx:id="dateSignature" layoutX="194.0" layoutY="158.0" prefHeight="26.0" prefWidth="150.0" promptText="Date signature" />
+
+</AnchorPane>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1">
+   <tabs>
+      <Tab text="Générer XML" closable="false">
+         <content>
+            <fx:include source="tab1.fxml" fx:id="tab1" />
+         </content>
+      </Tab>
+      <Tab text="Gérer contrats" closable="false">
+         <content>
+            <fx:include source="tab2.fxml" fx:id="tab2" />
+         </content>
+      </Tab>
+      <Tab text="Envoyer email" closable="false">
+         <content>
+            <fx:include source="tab3.fxml" fx:id="tab3" />
+         </content>
+      </Tab>
+   </tabs>
+</TabPane>
+
