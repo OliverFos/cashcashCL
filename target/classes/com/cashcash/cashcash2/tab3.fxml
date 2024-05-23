@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cashcash.cashcash2.TabThreeController">
+    <Label layoutX="14.0" layoutY="162.0" />
+    <TextField fx:id="clientIDTextField" layoutX="14.0" layoutY="14.0" prefHeight="26.0" prefWidth="98.0" promptText="Enter Client ID" />
+
+    <HBox spacing="10" />
+    <Button fx:id="searchClientButton" layoutX="122.0" layoutY="14.0" onAction="#handleSearchClientButtonClick" text="Search Client" />
+    <Text fx:id="messageErreur" fill="#c70000" layoutX="234.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+    <Text fx:id="messageSucc" fill="#00b728" layoutX="234.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+    <Button fx:id="creerPDF" layoutX="234.0" layoutY="100.0" onAction="#handleCreatePDF" prefHeight="26.0" prefWidth="90.0" text="Générer PDF" />
+    <TableView fx:id="serialNumbersTableView" layoutX="14.0" layoutY="71.0" prefHeight="200.0" prefWidth="150.0">
+        <columns>
+            <TableColumn fx:id="numMaterielColumn" prefWidth="150.0" text="Contrats expirés" />
+        </columns>
+    </TableView>
+   <Button fx:id="creerEmail" layoutX="234.0" layoutY="149.0" onAction="#handleCreateEmail" prefHeight="26.0" prefWidth="90.0" text="Envoyer Email" />
+
+</AnchorPane>

@@ -1,0 +1,4 @@
+--patch-module
+cashcash.com.cashcash=_
+--add-reads
+cashcash.com.cashcash=ALL-UNNAMED
